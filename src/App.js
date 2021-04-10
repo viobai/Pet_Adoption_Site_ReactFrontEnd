@@ -2,64 +2,78 @@ import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
 import Home from "./Home/Home.jsx";
-import Foo from "./Foo/Foo.jsx";
-import Bar from "./Bar/Bar.jsx";
-import Baz from "./Baz/Baz.jsx";
+import Pet from "./Pet/Pet.jsx";
+import PetList from "./PetList/PetList.jsx";
+import Form from "./Form/Form.jsx";
+import AboutUs from "./AboutUs/AboutUs.jsx";
 import Error from "./Error/Error.jsx";
 
-// here is some external content. look at the /baz route below
-// to see how this content is passed down to the components via props
-const externalContent = {
-  id: "article-1",
-  title: "An Article",
-  author: "April Bingham",
-  text: "Some text in the article",
-};
-
 function App() {
+  const [fetchedData, setFetchedData] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      // performs a GET request
+      const response = await fetch("http://demo0662291.mockable.io/pets");
+      const responseJson = await response.json();
+      setFetchedData(responseJson);
+    };
+
+    if (isEmpty(fetchedData)) {
+      fetchData();
+    }
+  }, [fetchedData]);
+
   return (
     <>
       <header>
         <nav>
           <ul>
-            {/* these links should show you how to connect up a link to a specific route */}
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Rescue Project: Humane</Link>
             </li>
             <li>
-              <Link to="/foo">Foo</Link>
+              <Link to="/petlist">Animals</Link>
             </li>
             <li>
-              <Link to="/bar/hats/sombrero">Bar</Link>
+              <Link to="/adoptionform">Apply For Adoption</Link>
             </li>
             <li>
-              <Link to="/baz">Baz</Link>
+              <Link to="/aboutus">About Us</Link>
             </li>
           </ul>
         </nav>
       </header>
-      {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/foo" exact component={Foo} />
-        {/* passing parameters via a route path */}
+        <Route path="/petlist" exact><PetList pets={fetchedData} /></Route>
         <Route
-          path="/bar/:categoryId/:productId"
           exact
-          render={({ match }) => (
-            // getting the parameters from the url and passing
-            // down to the component as props
-            <Bar
-              categoryId={match.params.categoryId}
-              productId={match.params.productId}
-            />
-          )}
+          path={`/petlist/:category`}
+          render={({ match }) => {
+            return fetchedData ? <PetList
+              pets={fetchedData[match.params.category]}
+            /> : null
+          }}
         />
         <Route
-          path="/baz"
           exact
-          render={() => <Baz content={externalContent} />}
+          path={`/petlist/:id`}
+          render={({ match }) => {
+            return fetchedData ? <Pet
+              pet={fetchedData[match.params.id]}
+            /> : null
+          }}
+        />
+        <Route
+          path="/adoptionform"
+          exact
+          render={() => <Form/>}
+        />
+        <Route
+          path="/aboutus"
+          exact
+          render={() => <AboutUs/>}
         />
         <Route component={Error} />
       </Switch>
