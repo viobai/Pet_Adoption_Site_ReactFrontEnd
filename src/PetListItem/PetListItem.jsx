@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import style from "./PetListItem.module.css";
 
 const PetList = (props) => {
-    const petLink = "/" + props.pet.id;
+    const petLink = "/id/" + props.pet.id;
     const imgDesc = "a " + props.pet.category + " of breed " + props.pet.breed + " named " + props.pet.name;
     return (
             <Link className={style.link} to={petLink}>
