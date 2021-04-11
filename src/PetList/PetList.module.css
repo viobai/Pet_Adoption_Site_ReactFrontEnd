@@ -1,0 +1,27 @@
+.petList {
+    display: grid;
+    margin: 1rem;
+    padding: 0rem;
+}
+
+.petList > * {
+    margin: 1rem;
+}
+
+@supports (display: grid) {
+    .petList{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(min-width: 700px) and (max-width: 1050px){
+        .petList {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media(max-width: 700px){
+        .petList {
+            grid-template-columns: 1fr;
+        }
+    }
+}

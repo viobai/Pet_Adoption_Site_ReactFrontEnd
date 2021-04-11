@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Switch, Route, Link } from "react-router-dom";
-
+import { isEmpty } from "lodash";
 import Home from "./Home/Home.jsx";
 import Pet from "./Pet/Pet.jsx";
 import PetList from "./PetList/PetList.jsx";
 import Form from "./Form/Form.jsx";
 import AboutUs from "./AboutUs/AboutUs.jsx";
 import Error from "./Error/Error.jsx";
+import Footer from "./Footer/Footer.jsx";
+import Header from "./Header/Header.jsx";
 
 function App() {
   const [fetchedData, setFetchedData] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
-      // performs a GET request
-      const response = await fetch("http://demo0662291.mockable.io/pets");
+      const response = await fetch("https://demo0662291.mockable.io/pets");
       const responseJson = await response.json();
       setFetchedData(responseJson);
     };
@@ -22,61 +23,38 @@ function App() {
     if (isEmpty(fetchedData)) {
       fetchData();
     }
+
   }, [fetchedData]);
 
-  return (
+  return isEmpty(fetchedData) ? <div>Website is loading!</div> : (
     <>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Rescue Project: Humane</Link>
-            </li>
-            <li>
-              <Link to="/petlist">Animals</Link>
-            </li>
-            <li>
-              <Link to="/adoptionform">Apply For Adoption</Link>
-            </li>
-            <li>
-              <Link to="/aboutus">About Us</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header/>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/petlist" exact><PetList pets={fetchedData} /></Route>
+        <Route path="/aboutus" exact render={() => <AboutUs/>}/>
+        <Route path="/adoptionform" exact><Form pets={Object.values(fetchedData)} /></Route>
         <Route
           exact
           path={`/petlist/:category`}
           render={({ match }) => {
             return fetchedData ? <PetList
-              pets={fetchedData[match.params.category]}
+              pets={Object.values(fetchedData).filter((pet) => pet.category.match(match.params.category))}
             /> : null
           }}
         />
         <Route
           exact
-          path={`/petlist/:id`}
+          path={`/id/:id`}
           render={({ match }) => {
-            return fetchedData ? <Pet
+            return fetchedData[match.params.id] ? <Pet
               pet={fetchedData[match.params.id]}
-            /> : null
+            /> : <Error/>
           }}
         />
-        <Route
-          path="/adoptionform"
-          exact
-          render={() => <Form/>}
-        />
-        <Route
-          path="/aboutus"
-          exact
-          render={() => <AboutUs/>}
-        />
+        <Route path="/petlist" exact><PetList pets={Object.values(fetchedData)} /></Route>
         <Route component={Error} />
       </Switch>
+      <Footer/>
     </>
   );
 }

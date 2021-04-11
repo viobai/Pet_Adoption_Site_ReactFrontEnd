@@ -1,11 +1,22 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from "prop-types";
+import PetListItem from "../PetListItem/PetListItem.jsx";
+import style from "./PetList.module.css";
 
-const Foo = () => {
+const PetList = (props) => {
     return (
         <div>
-            The foo page
+            <ul className={style.petList}>
+                {props.pets.map((pet) => (
+                <PetListItem className={style.listItem} pet={pet} key={pet.id} />
+                ))}
+            </ul>
         </div>
     )
 }
 
-export default Foo
+PetList.propTypes = {
+    pets: PropTypes.array.isRequired
+}
+
+export default PetList

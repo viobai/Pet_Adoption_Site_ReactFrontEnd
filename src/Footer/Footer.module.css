@@ -1,0 +1,14 @@
+.footerContainer {
+    display: flex;
+    margin-left: 2.5rem;
+    margin-top: 5rem;;
+}
+
+.footerContainer > div {
+    margin-right: 2rem;    
+}
+
+.footerContainer > div > * {
+    margin: 0.5rem;
+    padding: 0rem;
+}
