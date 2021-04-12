@@ -1,26 +1,51 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState }  from 'react';
+import PetSublistLinks from './PetSublistLinks/PetSublistLinks.jsx';
 import style from "./Header.module.css";
+import { Link } from 'react-router-dom';
+import { SiFurrynetwork } from "react-icons/si";
 
 const Header = () => {
+    const [hamburgerShowInfo, setShowHam] = useState(false);
+    const [hamburgerAnimalShowInfo, setShowHamAni] = useState(false);
+    const [animalShowInfo, setShowAni] = useState(false);
+    const onClickHam = () => {
+        setShowHam(!hamburgerShowInfo);
+    };
+    const onClickHamAni = () => {
+        setShowHamAni(!hamburgerAnimalShowInfo);
+    };
+    const onClickAni = () => {
+        setShowAni(!animalShowInfo);
+    };
+
     return (
         <header>
-            <h3><a href="/">Rescue Project: Humane</a></h3>
-                <nav className={style.headerNav}>
-                    <div className={style.dropdown}>
-                        <button className={style.btn}>Animals</button>
-                        <div className={style.dropdownContent}>
-                            <Link className={style.categoryLink} to="/petlist">All</Link>
-                            <Link className={style.categoryLink} to="/petlist/dog">Dogs</Link>
-                            <Link className={style.categoryLink} to="/petlist/cat">Cats</Link>
-                            <Link className={style.categoryLink} to="/petlist/smallfurry">Small & Furry</Link>
-                            <Link className={style.categoryLink} to="/petlist/bird">Birds</Link>
-                            <Link className={style.categoryLink} to="/petlist/reptile">Reptiles</Link>
+            <a href="/"><h3><SiFurrynetwork/> Rescue Project: Humane</h3></a>
+            <div className={style.navBarContainer}>
+                <div className={style.navBarColContainer}>
+                    <div><button onClick={onClickHam} className={style.dropBtnHam}>三</button></div>
+                    {hamburgerShowInfo && 
+                        <div className={style.navBarCol}>
+                            <div className={style.dropdown}>
+                                <button onClick={onClickHamAni} className={style.dropBtnInHam}>Animals</button>
+                                {hamburgerAnimalShowInfo && <div className={style.sublistHam}><PetSublistLinks/></div>}
+                            </div>
+                            <Link className={style.colBtn}to="/adoptionform" >Apply For Adoption</Link>
+                            <Link className={style.colBtn} to="/aboutus" >About Us</Link>
                         </div>
+                    }
+                </div>
+            </div>
+            <div className={style.navBarContainer}>
+                <div className={style.navBarRow}>
+                    <div>
+                        <button onClick={onClickAni} className={style.dropBtn}>Animals</button>
+                        {animalShowInfo && <PetSublistLinks/>}
                     </div>
-                    <button className={style.btn}><Link to="/adoptionform">Apply For Adoption</Link></button>
-                    <button className={style.btn}><Link to="/aboutus">About Us</Link></button>
-                </nav>
+                    <Link className={style.rowBtn} to="/adoptionform" >Apply For Adoption</Link>
+                    <Link to="/aboutus" className={style.rowBtn}>About Us</Link>
+                </div>
+            </div>
       </header>
     )
 }

@@ -1,74 +1,146 @@
 header {
     display: flex;
     justify-content: space-between;
+    padding: 0 1.5rem;
 }
 
-header > h3 > a {
+@font-face {
+    font-family: 'Marcellus';
+    src: url(../Fonts/Marcellus/Marcellus-Regular.ttf) format('truetype');
+}
+
+header > a > h3 {
+    font-family: 'Marcellus', serif;
+    font-size: 20px;
+}
+
+header > a > h3:hover {
+    color: orange;
+}
+
+header > a {
     color: orangered;
     display: inline;
-}
-
-.headerNav {
-    margin-top: 20px;
-}
-
-.headerNav > * {
-    white-space: nowrap;
-}
-
-.navButton {
-    background-color: orangered;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
     text-decoration: none;
 }
 
-.btn {
-    background-color: orangered;
-    color: white;
-    padding: 10px 21.5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;;
-    margin: 0.5rem;
+@media screen and (min-width:801px) {
+    .navBarContainer:nth-of-type(1) {
+        display: none;
+    }
+    .navBarContainer:nth-of-type(2) {
+        display: block;
+    }
 }
 
-.btn > a {
-    text-decoration: none;
+@media screen and (max-width:800px) {
+    .navBarContainer:nth-of-type(1) {
+        display: block;
+    }
+    .navBarContainer:nth-of-type(2) {
+        display: none;
+    }
+}
+
+.dropBtn, .dropBtnInHam {
+    font-family: Verdana, sans-serif;
+    background-color: orangered;
     color: white;
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.dropBtn{
+    margin-left: 0.7rem;
+}
+
+.colBtn, .rowBtn {
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+    background-color: orangered;
+    color: white;
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.rowBtn {
+    margin-left: 1rem;
+    height: 18px;
+}
+
+.dropBtnInHam {
+    width: 170px;
+    text-align: center;
+}
+
+.colBtn {
+    margin-top: 0.5rem;
+}
+
+.colBtn  > *, .rowBtn > * {
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+    color: white;
+}
+
+.colBtn:nth-of-type(3) {
+    text-align: right;
+}
+
+.colBtn:hover, .rowBtn:hover, .dropBtn:hover, .dropBtnHam:hover, .dropBtnInHam:hover  {
+    background-color: orange;
+}
+
+.navBarRow {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+}
+
+.navBarColContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navBarCol {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    justify-content: flex-end;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropBtnHam {
+    font-family: Verdana, sans-serif;
+    background-color: orangered;
+    color: white;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 0.7rem 0 0 0;
 }
 
 .dropdown {
-    display: inline-block;
-}
-  
-.dropdownContent {
-    opacity: 0;
-    transition: opacity 0s 0.5s;
-    position: absolute;
-    background-color: #f1f1f1;
     display: flex;
-    flex-direction: column;
-}
-  
-.categoryLink {
-    color: black;
-    padding: 12px 12px;
-    text-decoration: none;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-}
-  
-.categoryLink:hover {background-color: #ddd;}
-  
-.dropdown:hover .dropdownContent {
-    opacity: 1;
-    transition: opacity 0s;
+    justify-content: flex-end;
 }
 
-.dropdown:hover .btn {
-    background-color: orangered;
+.dropdown > *{
+    display: flex;
+    justify-content: flex-end;
 }
+
+.sublistHam {
+    margin-top: 1.9rem;
+    z-index: 1;
+}
+
+
+

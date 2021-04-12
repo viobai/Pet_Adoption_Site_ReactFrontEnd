@@ -17,8 +17,8 @@ const AboutUs = () => {
                         <div className={style.container}>
                             <h2 className={style.title}>Volunteer</h2>
                             <p><span className="">
-                                Covid-19 Updates: due to the current pandemic, we are not taking in any new 
-                                volunteers. Safety first!
+                                *** Covid-19 Updates: due to the current pandemic, we are not taking in any new 
+                                volunteers. Stay safe! ***
                             </span></p>
                             <p>
                                 We welcome volunteers in all ages and regardless of experience! Feel free to 

@@ -1,0 +1,19 @@
+
+.dropContainer {
+    position: absolute;
+    background-color: #f1f1f1;
+    flex-direction: column;
+    z-index: 1;
+    margin-top: 1rem;
+}
+  
+.categoryLink {
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+  
+.categoryLink:hover {background-color: #ddd;}

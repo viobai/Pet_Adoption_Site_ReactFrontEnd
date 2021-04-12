@@ -1,0 +1,7 @@
+.bodyContainer {
+    position: relative;
+}
+
+.bodyContainer > div:nth-of-type(1) {
+    flex: 1 1 auto;
+}

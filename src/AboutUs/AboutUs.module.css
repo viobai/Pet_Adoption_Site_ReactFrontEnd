@@ -4,12 +4,14 @@
   }
 
 .column {
-    width: 70%;
-
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .container {
     padding: 10px 15px;
+    margin-bottom: 3rem;
   }
   
 .container::after, .row::after {

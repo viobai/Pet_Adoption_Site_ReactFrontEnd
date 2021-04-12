@@ -1,24 +1,18 @@
-.home {
-    height:auto;
-    min-height: 70vh;
-    padding: 1rem 2rem 5rem 2rem;
-    overflow: visible;
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+    padding-top: 2rem;
 }
 
-@font-face {
-    font-family: 'Marcellus';
-    src: url(../Fonts/Marcellus/Marcellus-Regular.ttf) format('truetype');
+.errorContainer > h1 {
+    font-size: 48px;
 }
 
-.home > h1 {
-    font-family: 'Marcellus', serif;
-    font-size: 80px;
-    margin-top: 8rem;
-    margin-bottom: 0;
-}
-
-.homeDesc {
-    margin: 0 15rem 3rem 0;
+.errorContainer > p, .errorContainer > h3 {
+    margin: .5rem;
 }
 
 .startBtn {
@@ -33,7 +27,8 @@
     outline: none;
     display: flex;
     flex-direction: row;
-    width: 120px;
+    width: 220px;
+    margin-top: 1rem;
 }
 
 .startBtn:hover {
@@ -44,3 +39,8 @@
     padding-top: 5px;
     margin-right: 15px;
 }
+
+.email {
+    color: rgb(84, 84, 245);
+}
+

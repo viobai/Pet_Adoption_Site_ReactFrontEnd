@@ -5,9 +5,17 @@
   padding: 0;
 }
 
+.card:hover {
+  border-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .3);
+  opacity: 1;
+  z-index: 2;
+}
+
 .imgContainer {
   height: 80%;
   width: 100%;
+  overflow: auto;
 }
 
 img {
@@ -17,13 +25,13 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  overflow:hidden;
+  overflow:auto;
   background-repeat: no-repeat;
 }
 
 .shortInfo {
-  height: 20%;
-  padding: 2rem 0;
+  margin: 1.5rem 0;
+  padding: 0 2rem;
 }
 
 .link {

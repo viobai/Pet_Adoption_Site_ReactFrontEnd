@@ -1,7 +1,8 @@
 .footerContainer {
+    
     display: flex;
-    margin-left: 2.5rem;
-    margin-top: 5rem;;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
 }
 
 .footerContainer > div {
@@ -11,4 +12,8 @@
 .footerContainer > div > * {
     margin: 0.5rem;
     padding: 0rem;
+}
+
+.email {
+    color: rgb(84, 84, 245);
 }
