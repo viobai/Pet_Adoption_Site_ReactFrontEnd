@@ -6,7 +6,7 @@ import Pets from '@material-ui/icons/Pets';
 const Home = () => {
     return (
         <div className={style.home}>
-            <img src="https://raw.githubusercontent.com/viobai/seainfo6150-final-project-webapp/master/src/vecteezy_home_art/Pet/" alt="New Adopted Pet"/>
+            <img src="images/dog-family.png" alt="New Adopted Pet"/>
             <h1>Rescue Project: <br/>Humane</h1>
             <div className={style.homeDesc}>
                 <p>Each year, it's estimated that more than one million adoptable dogs and cats are euthanized in the United States.</p>
