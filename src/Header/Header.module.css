@@ -80,16 +80,14 @@ header > a {
 
 .colBtn {
     margin-top: 0.5rem;
+    text-align: right;
+
 }
 
 .colBtn  > *, .rowBtn > * {
     text-decoration: none;
     font-family: Verdana, sans-serif;
     color: white;
-}
-
-.colBtn:nth-of-type(3) {
-    text-align: right;
 }
 
 .colBtn:hover, .rowBtn:hover, .dropBtn:hover, .dropBtnHam:hover, .dropBtnInHam:hover  {

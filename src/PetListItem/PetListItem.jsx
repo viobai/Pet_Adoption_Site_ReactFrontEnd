@@ -9,10 +9,10 @@ const PetList = (props) => {
     return (
             <Link className={style.link} to={petLink}>
                 <div className={style.card}>
+                    <p className={style.hiddenMsg}>LEARN MORE</p>
                     <div className={style.imgContainer}><img src={props.pet.imageUrl} alt={imgDesc}/></div>
                     <div className={style.shortInfo}>
-                        <span className={style.name}>{props.pet.name}</span>
-                        <span className={style.age}>{props.pet.age}</span>
+                        <span className={style.name}>{props.pet.name}</span> {props.pet.age}
                     </div>
                     
                 </div>

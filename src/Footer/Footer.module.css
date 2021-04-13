@@ -15,5 +15,13 @@
 }
 
 .email {
-    color: rgb(84, 84, 245);
+    color: rgba(0, 0, 0, 0.918);
+}
+
+.email:hover {
+    color: rgba(0, 0, 255, 0.836);
+}
+
+.footerContainer > div > p {
+    color: rgba(0, 0, 0, 0.959);
 }
