@@ -33,7 +33,7 @@ function App() {
       <div className={style.bodyContainer}>
         <div>
           <Switch>
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact><Home pets={Object.values(fetchedData)} /></Route>
             <Route path="/aboutus" exact render={() => <AboutUs/>}/>
             <Route path="/adoptionform" exact><Form pets={Object.values(fetchedData)} /></Route>
             <Route path="/adoptionform/:petId" exact

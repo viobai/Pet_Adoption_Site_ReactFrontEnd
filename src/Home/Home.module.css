@@ -15,13 +15,7 @@ body {
     padding: 0;
 }
 
-.homeBottom > img {
-    width: 100%;
-    height: auto;
-    min-height: 460px;
-    max-height: 900px;
-    opacity: 0.3;
-}
+
 
 @font-face {
     font-family: 'Marcellus';
@@ -75,4 +69,43 @@ body {
 .startBtn > span:nth-of-type(1) {
     margin-right: 15px;
     margin-top: 2px;
+}
+
+.homeBottom {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.homeBottom > img {
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    /* transition: transform .5s; */
+  /* transform: scale(.5); */
+}
+
+.randomPetDisplay {
+    display: grid;
+    opacity: 0;
+    align-content: center;
+    z-index: 1;
+    position: relative;
+    padding: 3rem 2rem 3rem 2rem;
+    grid-gap: 1rem;
+}
+
+@supports (display: grid) {
+    .randomPetDisplay{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(max-width: 650px){
+        .randomPetDisplay {
+            grid-template-columns: 1fr;
+        }
+    }
 }
