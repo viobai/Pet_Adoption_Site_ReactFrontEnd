@@ -5,7 +5,7 @@
 .homeContainer {
     height:auto;
     min-height: 75vh;
-    padding: 0 0 0 0;
+    padding: 0;
     overflow: visible;
     margin: 0;
 }
@@ -15,31 +15,32 @@ body {
     padding: 0;
 }
 
-
-
 @font-face {
     font-family: 'Marcellus';
     src: url(../Fonts/Marcellus/Marcellus-Regular.ttf) format('truetype');
 }
 
 .homeTop {
-    padding: 2rem 10vw 2rem 10vw;
+    margin: 0;
+    padding: .5rem 10vw 1.5rem 7vw;
     height: 100%;
     background: #d9ccc6;
 }
 
 .homeTop > h1 {
+    padding: 0;
+    display: block;
     font-family: 'Marcellus', serif;
     font-size: 10vh;
-    margin: 0;
+    margin: 0 0 2rem 0;
     color: white;
     z-index: 2;
     text-shadow: -2px 0 var(--watermelonRed), 0 10px var(--watermelonRed), 2px 0 var(--watermelonRed), 0 -2px var(--watermelonRed);
 }
 
 .homeDesc {
-    margin: 0 10rem 3rem 0;
-    font-size: 2.7vh;
+    margin: 0 10rem 0 0;
+    font-size: 2.25vh;
     color: var(--watermelonRed);
     font-family: 'Marcellus', serif;
 }
@@ -72,40 +73,57 @@ body {
 }
 
 .homeBottom {
+    margin: 0;
+    padding: 0;
     display: inline-block;
     overflow: hidden;
     position: relative;
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+    padding-bottom: .5rem;
     width: 100%;
 }
 
 .homeBottom > img {
     width: 100%;
     height: auto;
-    opacity: 0.3;
+    opacity: 0.2;
     position: absolute;
     z-index: -1;
-    /* transition: transform .5s; */
-  /* transform: scale(.5); */
+    transform: translateY(-10%);
+
+}
+
+.homeBottom > h3 {
+    padding: 0;
+    font-family: 'Marcellus', serif;
+    font-size: 3vh;
+    color: var(--watermelonRed);
+    margin: 2rem 0 0 3rem;
 }
 
 .randomPetDisplay {
     display: grid;
-    opacity: 0;
     align-content: center;
     z-index: 1;
     position: relative;
-    padding: 3rem 2rem 3rem 2rem;
-    grid-gap: 1rem;
+    padding: 2rem 3rem 2rem 3rem;
+    grid-gap: 3rem;
 }
 
 @supports (display: grid) {
     .randomPetDisplay{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    @media(max-width: 650px){
+    @media(max-width: 750px){
         .randomPetDisplay {
             grid-template-columns: 1fr;
+        }
+        .homeBottom > img {
+            height: 100%;
+            width: auto;
+            transform: translateX(-10%) translateY(-20%);
         }
     }
 }
