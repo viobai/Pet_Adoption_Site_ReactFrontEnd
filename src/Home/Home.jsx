@@ -25,6 +25,7 @@ const Home = (props) => {
                     <p>Seriously, what could be better than that?</p>
                 </div>
                 <h1>Rescue Project: <br/>Humane</h1>
+                <img src=""/>
                 <Link className={style.startBtn} to="/petlist"><span>Get started</span> <span className={style.petIcon}><Pets/></span></Link>
             </div>
             <div className={style.homeBottom}>
