@@ -1,27 +1,33 @@
-.footerContainer {
-    
-    display: flex;
-    margin-left: 1rem;
-    margin-top: 1.5rem;
+:root {
+    --watermelonRed:  rgb(197, 47, 27);
 }
 
-.footerContainer > div {
-    margin-right: 2rem;    
+.footerContainer {
+    display: flex;
+    padding: 1rem 0 2.5rem 2rem;
+    background-color: #d9ccc6;;
+}
+
+.footerContainer > * {
+    margin-right: 2rem;   
 }
 
 .footerContainer > div > * {
     margin: 0.5rem;
     padding: 0rem;
-}
-
-.email {
-    color: rgba(0, 0, 0, 0.918);
-}
-
-.email:hover {
-    color: rgba(0, 0, 255, 0.836);
+    color: var(--watermelonRed);
 }
 
 .footerContainer > div > p {
-    color: rgba(0, 0, 0, 0.959);
+    margin: 0.5rem;
+    padding: 0rem;
+    color: var(--watermelonRed)
+}
+
+.email {
+    color: var(--watermelonRed);
+}
+
+.email:hover {
+    color: rgba(31, 31, 247, 0.836);
 }
