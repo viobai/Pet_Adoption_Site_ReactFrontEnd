@@ -41,7 +41,7 @@ const Form = (props) => {
   };
 
   return (
-    <div>
+    <div className={style.formPageContainer}>
       {
         submittedForm ? (
           <div className={style.submitMsgContainer}>

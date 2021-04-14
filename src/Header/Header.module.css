@@ -14,12 +14,12 @@ header {
     src: url(../Fonts/Marcellus/Marcellus-Regular.ttf) format('truetype');
 }
 
-header > a > h3 {
+.logo > h3 {
     font-family: 'Marcellus', serif;
     font-size: 20px;
 }
 
-header > a > h3:hover {
+.logo:hover {
     color: var(--btnHovCol);
 }
 
@@ -55,7 +55,6 @@ header > a {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    
 }
 
 .dropBtn{

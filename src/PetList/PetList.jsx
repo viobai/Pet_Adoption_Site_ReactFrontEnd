@@ -5,7 +5,7 @@ import style from "./PetList.module.css";
 
 const PetList = (props) => {
     return (
-        <div>
+        <div className={style.petListContainer}>
             <ul className={style.petList}>
                 {props.pets.map((pet) => (
                 <li><PetListItem className={style.listItem} pet={pet} key={pet.id} /></li>

@@ -9,7 +9,7 @@ const Pet = (props) => {
     const adoptionLink = "/adoptionform/" + props.pet.id;
 
     return (
-        <div>
+
             <div className={style.petInfoContainer}>
                 <div className={style.imgContainer}><img className={style.petImg} src={props.pet.imageUrl} alt={imgDesc}/></div>
                 <div className={style.petInfo}>
@@ -43,7 +43,7 @@ const Pet = (props) => {
                     
                 </div>
             </div>
-        </div>
+
         
     )
 }

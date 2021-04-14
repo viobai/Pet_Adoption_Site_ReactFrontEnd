@@ -20,7 +20,7 @@ const Header = () => {
 
     return (
         <header>
-            <a href="/"><h3><SiFurrynetwork/> Rescue Project: Humane</h3></a>
+            <a className={style.logo} href="/"><h3><SiFurrynetwork/> Rescue Project: Humane</h3></a>
             <div className={style.navBarContainer}>
                 <div className={style.navBarColContainer}>
                     <div><button onClick={onClickHam} className={style.dropBtnHam}>三</button></div>

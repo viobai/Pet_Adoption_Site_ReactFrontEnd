@@ -3,9 +3,8 @@ import style from './AboutUs.module.css';
 
 const AboutUs = () => {
     return (
-        <div>
-            <div className={style.row}>
-                <div className={style.column}>
+        <div className={style.aboutUsContainer}>
+             <div className={style.column}>
                     <div className={style.card}>
                         <div className={style.container}>
                             <h2 className={style.title}>Mission Statement</h2>
@@ -39,10 +38,9 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+
         </div>
-
-
+               
     )
 }
 

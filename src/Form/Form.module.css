@@ -1,19 +1,36 @@
+:root {
+    --softRose: rgb(211, 69, 50);
+}
+
+@font-face {
+    font-family: 'Marcellus';
+    src: url(../Fonts/Marcellus/Marcellus-Regular.ttf) format('truetype');
+}    
+
+.formPageContainer {
+    background-color: #d9ccc6;
+    padding: 1.5rem 0 2rem 0;
+}
 .formContainer, .submitMsgContainer {
     display: flex;
     flex-direction: column;
     padding-top: .5rem;
     margin-left: 15%;
     margin-right: 15%;
-    margin-bottom: 5rem;
 }
 
 .formContainer > h2, .submitMsgContainer > p {
     margin: 1rem 0 1rem 2rem;
-    font-family: Verdana, sans-serif;
+    font-family: 'Marcellus', serif;
     font-size: 28px;
     font-weight: bolder;
-    color: orangered;
+    color: rgb(214, 32, 8);
 }
+
+.submitMsgContainer > p {
+    margin: 14rem 0 8em 2rem;
+}
+
 
 .inputContainer {
     display: flex;
@@ -23,6 +40,8 @@
     border-radius: 5px;
     margin: 1rem;
     padding: 1rem;
+    background-color: #fdf8f6;
+    color: rgb(53, 50, 49);
 }
 
 .inputContainer > :nth-child(2) {
@@ -55,7 +74,7 @@
 
 
 .required {
-    color: orangered;
+    color: var(--softRose);
 }
 
 .inputContainer > p {
@@ -75,13 +94,14 @@
 
 .submitBtn {
     text-decoration: none;
-    background-color: orangered;
+    background-color: var(--softRose);
     color: white;
     padding: 10px 21.5px;
     font-size: 16px;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
-    margin: 0 0 0 3rem;
+    margin: 0 0 2rem 3rem;
     width: 100px;
 }
 
@@ -95,8 +115,4 @@
     margin: .5rem 0 .5rem 3rem;
 }
 
-.submitMsgContainer {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-}
 

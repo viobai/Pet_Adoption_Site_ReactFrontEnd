@@ -3,12 +3,13 @@
     position: absolute;
     background-color: #f1f1f1;
     flex-direction: column;
-    z-index: 1;
+    z-index: 2;
     margin-top: 1rem;
 }
   
 .categoryLink {
-    color: black;
+    color: rgb(185, 46, 28);
+    font-weight: 525;
     padding: 12px 12px;
     text-decoration: none;
     display: block;

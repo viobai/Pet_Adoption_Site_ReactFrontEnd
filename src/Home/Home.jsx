@@ -20,17 +20,23 @@ const Home = (props) => {
     return (
         <div className={style.homeContainer}>
             <div className={style.homeTop}>
+                
                 <div className={style.homeDesc}>
                     <p>When you adopt, you'll change a homeless animal's whole world and get a new best friend.</p>
                     <p>Seriously, what could be better than that?</p>
                 </div>
-                <h1>Rescue Project: <br/>Humane</h1>
-                <img src=""/>
+                <div className={style.homeTitleImgWrap}>
+                    <h1>Rescue Project: <br/>Humane</h1>
+                    <div className={style.homeTopImgWrap}>
+                        <img className={style.homeTopImg} alt="People Holding Pets" src="https://github.com/viobai/seainfo6150-final-project-webapp/blob/master/src/images/homeTopImg.png?raw=true"/>
+                    </div>
+                </div>
+                    
                 <Link className={style.startBtn} to="/petlist"><span>Get started</span> <span className={style.petIcon}><Pets/></span></Link>
             </div>
             <div className={style.homeBottom}>
                 <img alt="New Pet and Family" src="https://github.com/viobai/seainfo6150-final-project-webapp/blob/master/src/images/dog-family.png?raw=true" alt="New Adopted Pet"/>
-                <h3>Some of our available pets ...</h3>
+                <h3>Some of our available pets . . .</h3>
                 <div className={style.randomPetDisplay} id="randomPetDisplay">
                     <PetListItem pet={petsDisplay[0]}/>
                     <PetListItem pet={petsDisplay[1]}/>
