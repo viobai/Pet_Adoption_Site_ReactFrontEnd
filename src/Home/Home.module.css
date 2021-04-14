@@ -3,10 +3,10 @@
 }
 
 .homeContainer {
-    height:auto;
+    width: 100%;
     min-height: 75vh;
     padding: 0;
-    overflow: visible;
+    overflow: hidden;
     margin: 0;
 }
 
@@ -22,18 +22,15 @@ body {
 
 .homeTop {
     margin: 0;
-    padding: 1.5rem 10vw 2rem 7vw;
-    height: 100%;
-    width: 100vw;
+    padding: 1.5rem 5rem 2rem 3rem;
     background: #ebe5e2;
-    display: inline-block;
-    overflow: hidden;
-    /* position: relative; */
+    width: 100%;
+    position: relative;
 }
 
 .homeTopImgWrap {
     position: absolute;
-    transform: translateX(0%);
+    transform: translateX(35%) translateY(-15%);
     pointer-events: none;
     
 }
