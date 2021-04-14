@@ -14,7 +14,7 @@ const Pet = (props) => {
             <div className={style.petInfoContainer}>
                 <div className={style.imgContainer}><img className={style.petImg} src={props.pet.imageUrl} alt={imgDesc}/></div>
                 <div className={style.petInfo}>
-                    <div className={style.nameAdoptBtn}>
+                    <div className={style.nameAdoptBtnWrapper}>
                         <h1>{props.pet.name}</h1>
                         <Link className={style.adoptBtn} to={adoptionLink}><span>Adopt me</span> <FavoriteIcon/></Link>
                     </div>
@@ -37,7 +37,7 @@ const Pet = (props) => {
                     <h4>Addtional Details</h4>
                         <ul>
                             {props.pet.characteristics.map((desc) => (
-                                <li className={style.character} key={desc}>{desc}</li>
+                                <li className={style.detail} key={desc}>{desc}</li>
                             ))}
                         </ul>
                     </div>

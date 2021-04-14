@@ -1,11 +1,7 @@
-:root {
-    --watermelonRed:  rgb(197, 47, 27);
-}
-
 .footerContainer {
     display: flex;
     padding: 1rem 0 2.5rem 2rem;
-    background-color: #f0eae76c;
+    background-color: #dbd2cd;
 }
 
 .footerContainer > * {
@@ -19,9 +15,7 @@
 }
 
 .footerContainer > div > p {
-    margin: 0.5rem;
-    padding: 0rem;
-    color: var(--watermelonRed)
+    color: var(--watermelonRed);
 }
 
 .email {

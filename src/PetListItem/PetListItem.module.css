@@ -6,34 +6,6 @@
   position: relative;
 }
 
-.hiddenMsg {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 30px;
-  font-weight: bolder;
-}
-
-.card:hover {
-  border-color: rgba(0, 0, 0, .1);
-  background-color: rgba(0, 0, 0, .2);
-  opacity: 1;
-  z-index: 2;
-}
-
-.card:hover .hiddenMsg {
-  display: block;
-  z-index: 2;
-}
-
-.card:hover img {
-  opacity: 0.5;
-  
-}
-
 .imgContainer {
   height: 80%;
   width: 100%;
@@ -50,7 +22,6 @@ img {
   margin-right: auto;
   overflow:auto;
   background-repeat: no-repeat;
-
 }
 
 .shortInfo {
@@ -72,4 +43,31 @@ img {
   font-size: 30px;
   font-weight: bold;
   margin-right: 1rem;
+}
+
+.hiddenMsg {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.card:hover {
+  border-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, .2);
+  opacity: 1;
+  z-index: 2;
+}
+
+.card:hover img {
+  opacity: 0.5;
+}
+
+.card:hover .hiddenMsg {
+  display: block;
+  z-index: 2;
 }

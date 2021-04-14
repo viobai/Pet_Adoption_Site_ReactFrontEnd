@@ -3,15 +3,15 @@
     --btnHovCol: rgb(252, 118, 8);
 }
 
+@font-face {
+    font-family: 'Marcellus';
+    src: url(../Fonts/Marcellus/Marcellus-Regular.ttf) format('truetype');
+}
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 0 1.5rem;
-}
-
-@font-face {
-    font-family: 'Marcellus';
-    src: url(../Fonts/Marcellus/Marcellus-Regular.ttf) format('truetype');
 }
 
 .logo > h3 {
@@ -19,14 +19,29 @@ header {
     font-size: 20px;
 }
 
-.logo:hover {
-    color: var(--btnHovCol);
-}
-
 header > a {
     color: var(--btnCol);
-    display: inline;
     text-decoration: none;
+}
+
+/* Hamburger(Col) or Row Menu Layout */
+
+.navBarRow {
+    display: flex;
+    flex-direction: row;
+    margin-top: .8rem;
+}
+
+.navBarColContainer, .navBarCol {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navBarCol {
+    flex-direction: column;
+    margin-top: 4rem;
+    position: absolute;
+    z-index: 2;
 }
 
 @media screen and (min-width:801px) {
@@ -47,21 +62,9 @@ header > a {
     }
 }
 
-.dropBtn, .dropBtnInHam {
-    font-family: Verdana, sans-serif;
-    background-color: var(--btnCol);
-    color: white;
-    padding: 10px 18px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-}
+/* Buttons */
 
-.dropBtn{
-    margin-left: 0.7rem;
-}
-
-.colBtn, .rowBtn {
+.colBtn, .rowBtn, .animalsDropBtn, .animalsDropBtnInHam, .dropBtnHam {
     text-decoration: none;
     font-family: Verdana, sans-serif;
     background-color: var(--btnCol);
@@ -73,20 +76,17 @@ header > a {
 }
 
 .rowBtn {
-    
     margin-left: 1rem;
     height: 18px;
 }
 
-.dropBtnInHam {
-    width: 170px;
-    text-align: center;
+.animalsDropBtn{
+    margin-left: 0.7rem;
 }
 
 .colBtn {
     margin-top: 0.5rem;
     text-align: right;
-
 }
 
 .colBtn  > *, .rowBtn > * {
@@ -96,47 +96,22 @@ header > a {
     
 }
 
-.colBtn:hover, .rowBtn:hover, .dropBtn:hover, .dropBtnHam:hover, .dropBtnInHam:hover  {
-    background-color: var(--btnHovCol);
-}
-
-.navBarRow {
-    display: flex;
-    flex-direction: row;
-    margin-top: .8rem;
-}
-
-.navBarColContainer {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navBarCol {
-    display: flex;
-    flex-direction: column;
-    margin-top: 4rem;
-    justify-content: flex-end;
-    position: absolute;
-    z-index: 1;
-}
-
 .dropBtnHam {
-    font-family: Verdana, sans-serif;
-    background-color: var(--watermelonRed);
-    color: white;
-    padding: 10px 12px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
     margin: 0.7rem 0 0 0;
 }
 
-.dropdown {
-    display: flex;
-    justify-content: flex-end;
+.animalsDropBtnInHam {
+    width: 170px;
+    text-align: center;
 }
 
-.dropdown > *{
+.colBtn:hover, .rowBtn:hover, .animalsDropBtn:hover, .dropBtnHam:hover, .animalsDropBtnInHam:hover, .logo:hover  {
+    background-color: var(--btnHovCol);
+}
+
+/* Hamburger Button Dropdown Menu */
+
+.dropdown > * {
     display: flex;
     justify-content: flex-end;
 }

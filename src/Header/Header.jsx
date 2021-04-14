@@ -21,13 +21,14 @@ const Header = () => {
     return (
         <header>
             <a className={style.logo} href="/"><h3><SiFurrynetwork/> Rescue Project: Humane</h3></a>
+            
             <div className={style.navBarContainer}>
                 <div className={style.navBarColContainer}>
                     <div><button onClick={onClickHam} className={style.dropBtnHam}>三</button></div>
                     {hamburgerShowInfo && 
                         <div className={style.navBarCol}>
                             <div className={style.dropdown}>
-                                <button onClick={onClickHamAni} className={style.dropBtnInHam}>Animals</button>
+                                <button onClick={onClickHamAni} className={style.animalsDropBtnInHam}>Animals</button>
                                 {hamburgerAnimalShowInfo && <div className={style.sublistHam}><PetSublistLinks/></div>}
                             </div>
                             <Link className={style.colBtn} to="/adoptionform" >Apply For Adoption</Link>
@@ -36,10 +37,11 @@ const Header = () => {
                     }
                 </div>
             </div>
+
             <div className={style.navBarContainer}>
                 <div className={style.navBarRow}>
                     <div>
-                        <button onClick={onClickAni} className={style.dropBtn}>Animals</button>
+                        <button onClick={onClickAni} className={style.animalsDropBtn}>Animals</button>
                         {animalShowInfo && <PetSublistLinks/>}
                     </div>
                     <Link className={style.rowBtn} to="/adoptionform" >Apply For Adoption</Link>

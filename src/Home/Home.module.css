@@ -1,18 +1,5 @@
 :root {
-    --watermelonRed: rgb(211, 69, 50);
-}
-
-.homeContainer {
-    width: 100%;
-    min-height: 75vh;
-    padding: 0;
-    overflow: hidden;
-    margin: 0;
-}
-
-body {
-    margin: 0;
-    padding: 0;
+    --watermelonRed: rgb(216, 36, 13);
 }
 
 @font-face {
@@ -20,28 +7,42 @@ body {
     src: url(../Fonts/Marcellus/Marcellus-Regular.ttf) format('truetype');
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.homePageContainer {
+    width: 100%;
+    min-height: 75vh;
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Top Section */
+
 .homeTop {
     margin: 0;
-    padding: 1.5rem 5rem 2rem 3rem;
-    background: #ebe5e2;
+    padding: 3rem 4rem 4rem 4rem;
+    background: #ece8e6;
     width: 100%;
     position: relative;
-}
-
-.homeTopImgWrap {
-    position: absolute;
-    transform: translateX(35%) translateY(-15%);
-    pointer-events: none;
-    
-}
-
-.homeTopImgWrap > img {
-    pointer-events: none;
 }
 
 .homeTitleImgWrap {
     display: flex;
     flex-direction: row;
+    pointer-events: none;
+}
+
+.homeTopImgWrap {
+    position: absolute;
+    transform: translateX(40%) translateY(-5%);
+    pointer-events: none;
+}
+
+.homeTopImgWrap > img {
     pointer-events: none;
 }
 
@@ -53,10 +54,11 @@ body {
     color: white;
     opacity: 1;
     z-index: 1;
-    text-shadow: -2px 0 var(--watermelonRed), 0 10px var(--watermelonRed), 2px 0 var(--watermelonRed), 0 -2px var(--watermelonRed);
+    text-shadow: -2px 0 var(--watermelonRed), 5px 8px var(--watermelonRed), 2px 0 var(--watermelonRed), 0 -2px var(--watermelonRed);
 }
 
 .homeDesc {
+    padding: 0;
     margin: 0 10rem 0 0;
     font-size: 2.25vh;
     color: var(--watermelonRed);
@@ -64,41 +66,54 @@ body {
 }
 
 .startBtn {
-    font-family: 'Marcellus', serif;
     text-decoration: none;
+    font-family: 'Marcellus', serif;
     font-weight: bold;
     color: white;
     padding: 10px 12px;
     font-size: 19px;
     background-color: var(--watermelonRed);
-    border: none;
     border-radius: 5px;
-    outline: none;
     display: flex;
     flex-direction: row;
-    width: 138px;
-    margin-bottom: 1rem;
+    width: 148px;
+    margin-bottom: .5rem;
+    margin-top: 1.3rem;
 }
-
-.startBtn:hover {
-    background-color: rgba(255, 94, 0, 0.842);
-}
-
 
 .startBtn > span:nth-of-type(1) {
     margin-right: 15px;
     margin-top: 2px;
 }
 
+.startBtn:hover {
+    background-color: rgba(255, 94, 0, 0.842);
+}
+
+@media(max-width: 890px){
+    .homeTopImgWrap {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 1s, opacity 0.5s linear;
+    }
+}
+
+@media(min-width: 891px){
+    .homeTopImgWrap {
+        visibility: visible;
+        opacity: 0.65;
+        transition: opacity .5s linear;
+    }
+}
+
+/* Bottom Section */
+
 .homeBottom {
-    margin: 0;
-    padding: 0;
+    margin: .5rem 0 .2rem 0;
+    padding: 0 0 .5rem 0;
     display: inline-block;
     overflow: hidden;
     position: relative;
-    margin-top: .5rem;
-    margin-bottom: .2rem;
-    padding-bottom: .5rem;
     width: 100%;
 }
 
@@ -134,7 +149,7 @@ body {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    @media(max-width: 750px){
+    @media(max-width: 890px){
         .randomPetDisplay {
             grid-template-columns: 1fr;
         }
@@ -146,18 +161,3 @@ body {
     }
 }
 
-@media(max-width: 800px){
-    .homeTopImgWrap {
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0s 1s, opacity 0.5s linear;
-    }
-}
-
-@media(min-width: 801px){
-    .homeTopImgWrap {
-        visibility: visible;
-        opacity: 0.65;
-        transition: opacity .5s linear;
-    }
-}

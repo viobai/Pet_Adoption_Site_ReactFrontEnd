@@ -1,32 +1,39 @@
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-    background-color: #fdf8f6;
-  }
+.aboutUsPageContainer {
+  background:#dfdad9;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
 
 .column {
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  
 }
 
-.aboutUsContainer {
-  background: #d9ccc6;
-  padding: 3rem 0 1rem 0;
+.imgAtBack {
+  opacity: 0.2;
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
 }
 
-.container {
-    padding: 10px 15px;
-    margin-bottom: 3rem;
-  }
-  
-.container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  opacity: 0.75;
+  background-color: #ffffff;
+  z-index: 1;
+  padding: .5rem 1rem 1rem 1rem;
+  margin: 2.5rem 0 2.5rem 0;
 }
 
-.title {
-    color: rgb(211, 69, 50);
+.subTitle {
+  color: rgb(211, 69, 50);
+  font-size: 3vh;
+}
+
+.update {
+  font-weight: bold;
 }

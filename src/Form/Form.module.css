@@ -1,25 +1,21 @@
-:root {
-    --softRose: rgb(211, 69, 50);
-}
-
 @font-face {
     font-family: 'Marcellus';
     src: url(../Fonts/Marcellus/Marcellus-Regular.ttf) format('truetype');
 }    
 
 .formPageContainer {
-    background-color: #d9ccc6;
+    background-color: #e6dedb;
     padding: 1.5rem 0 2rem 0;
     overflow: hidden;
     position: relative;
 }
+
 .formContainer, .submitMsgContainer {
     display: flex;
     flex-direction: column;
     padding-top: .5rem;
     margin-left: 15%;
     margin-right: 15%;
-    z-index: 1;
 }
 
 .formContainer > h2, .submitMsgContainer > p {
@@ -34,6 +30,7 @@
     margin: 14rem 0 8em 2rem;
 }
 
+/* Within Each Input Card */
 
 .inputContainer {
     display: flex;
@@ -45,19 +42,26 @@
     padding: 1rem;
     background-color: #fdf8f6;
     color: rgb(53, 50, 49);
-    z-index: 1;
+}
+
+.required {
+    color: var(--softRose);
+}
+
+.question {
+    font-weight: bold;
 }
 
 .inputContainer > :nth-child(2) {
     padding: 1rem 0 0 0;
 }
 
-.question {
-    font-weight: bold !important;
-}
-
 .inputContainer > label > input {
     margin-left: 1rem;
+}
+
+.inputContainer > p {
+    margin: 0;
 }
 
 .inputContainer > label > select {
@@ -69,6 +73,8 @@
     font-size: 14px;
 }
 
+/* Hidden Inputs */
+
 .livingSpaceInput {
     margin-top: 1rem;
     width: 20%;
@@ -76,20 +82,14 @@
     display: block;
 }
 
-
-.required {
-    color: var(--softRose);
-}
-
-.inputContainer > p {
-    display:  inline;
-    padding: 0;
-    margin: 0;
+.houseMemberList {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem 0 .5rem 3rem;
 }
 
 .hiddenInput {
     margin-left: 1rem;
-    
 }
 
 .hiddenInput > input {
@@ -102,52 +102,34 @@
     flex-direction: row;
 }
 
-.submitBtn {
+/* Buttons */
+
+.cancelBtn, .submitBtn {
     text-decoration: none;
-    background-color: var(--softRose);
-    color: white;
-    padding: 10px 21.5px;
-    font-size: 16px;
-    font-weight: bold;
     font-family: Verdana, sans-serif;
-    border: none;
+    font-size: 2vh;
+    font-weight: bold;
     border-radius: 5px;
-    width: 100px;
-    z-index: 1;
+    padding: 10px 21.5px;
+}
+
+.submitBtn {
+    border: none;
+    background-color: rgb(214, 32, 8);
+    color: white;
 }
 
 .cancelBtn {
-    text-decoration: none;
-    font-family: Verdana, sans-serif;
-    color: var(--softRose);
-    padding: 10px 21.5px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
     color: rgb(201, 23, 0);
     margin-left: 1rem;
-    width: 52px;
-    z-index: 1;
 }
 
 .cancelBtn:hover {
-    color: rgb(243, 93, 6);
+    background-color: rgb(245, 241, 236);
 }
 
 .submitBtn:hover {
-    background-color: orange;
+    background-color: rgb(235, 135, 4);
 }
 
-.houseMemberList {
-    display: flex;
-    flex-direction: column;
-    margin: .5rem 0 .5rem 3rem;
-}
-
-.imgAtBack {
-    opacity: 0.125;
-    position: absolute;
-    transform: translateY(5%);
-    pointer-events: none;
-}
 
