@@ -28,18 +28,24 @@ body {
     background: #ebe5e2;
     display: inline-block;
     overflow: hidden;
-    position: relative;
+    /* position: relative; */
 }
 
 .homeTopImgWrap {
     position: absolute;
-    transform: translateX(30%);
+    transform: translateX(0%);
+    pointer-events: none;
     
+}
+
+.homeTopImgWrap > img {
+    pointer-events: none;
 }
 
 .homeTitleImgWrap {
     display: flex;
     flex-direction: row;
+    pointer-events: none;
 }
 
 .homeTitleImgWrap > h1 {
@@ -106,7 +112,7 @@ body {
     position: absolute;
     z-index: -1;
     transform: translateY(-10%);
-
+    pointer-events: none;
 }
 
 .homeBottom > h3 {

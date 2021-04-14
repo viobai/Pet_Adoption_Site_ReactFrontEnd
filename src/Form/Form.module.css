@@ -10,6 +10,8 @@
 .formPageContainer {
     background-color: #d9ccc6;
     padding: 1.5rem 0 2rem 0;
+    overflow: hidden;
+    position: relative;
 }
 .formContainer, .submitMsgContainer {
     display: flex;
@@ -17,6 +19,7 @@
     padding-top: .5rem;
     margin-left: 15%;
     margin-right: 15%;
+    z-index: 1;
 }
 
 .formContainer > h2, .submitMsgContainer > p {
@@ -42,6 +45,7 @@
     padding: 1rem;
     background-color: #fdf8f6;
     color: rgb(53, 50, 49);
+    z-index: 1;
 }
 
 .inputContainer > :nth-child(2) {
@@ -109,6 +113,7 @@
     border: none;
     border-radius: 5px;
     width: 100px;
+    z-index: 1;
 }
 
 .cancelBtn {
@@ -122,6 +127,7 @@
     color: rgb(201, 23, 0);
     margin-left: 1rem;
     width: 52px;
+    z-index: 1;
 }
 
 .cancelBtn:hover {
@@ -138,4 +144,10 @@
     margin: .5rem 0 .5rem 3rem;
 }
 
+.imgAtBack {
+    opacity: 0.125;
+    position: absolute;
+    transform: translateY(5%);
+    pointer-events: none;
+}
 

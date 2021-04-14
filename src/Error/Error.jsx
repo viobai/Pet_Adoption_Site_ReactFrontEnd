@@ -6,6 +6,7 @@ import Pets from '@material-ui/icons/Pets';
 const Error = () => {
     return (
         <div className={style.errorContainer}>
+            <img className={style.imgAtBack} src="https://github.com/viobai/seainfo6150-final-project-webapp/blob/master/src/images/errorImg.png?raw=true" alt="Family and Pets"/>
             <h1>404</h1>
             <h3>Oops, the page you are looking for does not exist.</h3>
             <p>Feel free to shoot us a email at 

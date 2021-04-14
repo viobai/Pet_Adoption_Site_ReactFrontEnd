@@ -43,6 +43,7 @@ const Form = (props) => {
 
   return (
     <div className={style.formPageContainer}>
+      <img className={style.imgAtBack} src="https://github.com/viobai/seainfo6150-final-project-webapp/blob/master/src/images/formImg.png?raw=true" alt="Cat Drawing"/>
       {
         submittedForm ? (
           <div className={style.submitMsgContainer}>

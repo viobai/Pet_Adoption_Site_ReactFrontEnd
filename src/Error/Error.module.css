@@ -1,5 +1,5 @@
 :root {
-    --softRose: rgb(211, 64, 44);
+    --softRose: rgb(189, 46, 27);
 }
 
 .errorContainer {
@@ -10,16 +10,39 @@
     justify-content: center;
     padding-bottom: 5rem;
     padding-top: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgAtBack {
+    opacity: 0.125;
+    position: absolute;
+    transform: translateY(5%);
+    pointer-events: none;
+}
+
+
+
+.errorContainer > p, .errorContainer > h3, .errorContainer > h1 {
+    color: var(--softRose);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    z-index: 1;
+    text-align: center;
 }
 
 .errorContainer > h1 {
-    color: var(--softRose);
-    font-size: 58px;
+    font-size: 10vh;
+    margin: 3rem 0;
 }
 
-.errorContainer > p, .errorContainer > h3 {
-    margin: 0 .5rem .5rem .5rem;
-    color: var(--softRose);
+.errorContainer > h3 {
+    font-size: 3vh;
+    margin: 0;
+}
+
+.errorContainer > p {
+    font-size: 2vh;
 }
 
 .startBtn {
@@ -36,6 +59,7 @@
     flex-direction: row;
     width: 198px;
     margin-top: 1rem;
+    z-index: 1;
 }
 
 .startBtn:hover {
