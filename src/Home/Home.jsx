@@ -14,8 +14,7 @@ const Home = (props) => {
             randomIdx.push(r);
             petsDisplay.push(props.pets[r]);
         }
-    }
-    
+    }    
 
     return (
         <div className={style.homeContainer}>

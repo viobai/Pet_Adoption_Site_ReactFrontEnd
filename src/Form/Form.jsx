@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
 import style from "./Form.module.css";
 
@@ -133,7 +134,11 @@ const Form = (props) => {
               <label htmlFor="noExperience"><input name="petExperience" type="radio" id="noExperience" value="no" /> no</label>
             </div>
             <br/>
-            <input className={style.submitBtn} type="submit" value="Submit" />
+            <div className={style.formBtnContainer}>
+              <input className={style.submitBtn} type="submit" value="Submit" />
+              <Link className={style.cancelBtn} to="/petlist">Cancel</Link>
+            </div>
+            
           </form>
           
         )

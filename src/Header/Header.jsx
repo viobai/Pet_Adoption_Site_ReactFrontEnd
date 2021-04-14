@@ -30,7 +30,7 @@ const Header = () => {
                                 <button onClick={onClickHamAni} className={style.dropBtnInHam}>Animals</button>
                                 {hamburgerAnimalShowInfo && <div className={style.sublistHam}><PetSublistLinks/></div>}
                             </div>
-                            <Link className={style.colBtn}to="/adoptionform" >Apply For Adoption</Link>
+                            <Link className={style.colBtn} to="/adoptionform" >Apply For Adoption</Link>
                             <Link className={style.colBtn} to="/aboutus" >About Us</Link>
                         </div>
                     }

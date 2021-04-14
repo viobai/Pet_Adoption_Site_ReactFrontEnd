@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import style from "./Pet.module.css";
-import { FcLike  } from "react-icons/fc"
+import { FcLike  } from "react-icons/fc";
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const Pet = (props) => {
     const imgDesc = "a " + props.pet.category + " of breed " + props.pet.breed + " named " + props.pet.name;
@@ -15,7 +16,7 @@ const Pet = (props) => {
                 <div className={style.petInfo}>
                     <div className={style.nameAdoptBtn}>
                         <h1>{props.pet.name}</h1>
-                        <Link className={style.petIcon} to={adoptionLink}>Adopt me <FcLike/></Link>
+                        <Link className={style.adoptBtn} to={adoptionLink}><span>Adopt me</span> <FavoriteIcon/></Link>
                     </div>
                     <dl className={style.petTable}>
                         <dt>ID</dt>
