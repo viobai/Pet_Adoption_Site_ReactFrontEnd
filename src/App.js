@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { isEmpty } from "lodash";
 import Home from "./Home/Home.jsx";
 import Pet from "./Pet/Pet.jsx";
@@ -13,6 +13,7 @@ import style from "./App.module.css";
 
 function App() {
   const [fetchedData, setFetchedData] = useState();
+  const petCategories = ["","dog", "cat", "smallfurry", "bird", "reptile"];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,7 +37,7 @@ function App() {
             <Route path="/" exact><Home pets={Object.values(fetchedData)} /></Route>
             <Route path="/aboutus" exact render={() => <AboutUs/>}/>
             <Route path="/adoptionform" exact><Form pets={Object.values(fetchedData)} /></Route>
-            <Route path="/adoptionform/:petId" exact
+            <Route path="/adoptionform/:petId" exact 
               render={({ match }) => {
                 return fetchedData[match.params.petId] ? <Form
                   petId={fetchedData[match.params.petId]} pets={Object.values(fetchedData)}
@@ -47,10 +48,11 @@ function App() {
               exact
               path={`/petlist/:category`}
               render={({ match }) => {
-                return fetchedData ? <PetList
-                  pets={Object.values(fetchedData).filter((pet) => pet.category.match(match.params.category))}
-                /> : null
-              }}
+                return (fetchedData && petCategories.indexOf(match.params.category) > -1) ? 
+                  <PetList pets={Object.values(fetchedData).filter((pet) => pet.category.match(match.params.category))}/>
+                  : <Error/>
+                }
+              }
             />
             <Route
               exact

@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pet tests renders correctly 1`] = `
+<div>
+  <div
+    class="petInfoContainer"
+  >
+    <div
+      class="imgContainer"
+    >
+      <img
+        alt="a dog of breed Mixed Breed named Apollo"
+        class="petImg"
+        src="https://raw.githubusercontent.com/viobai/seainfo6150-final-project-webapp/master/src/images/Pet/Apollo.jpeg"
+      />
+    </div>
+    <div
+      class="petInfo"
+    >
+      <div
+        class="nameAdoptBtnWrapper"
+      >
+        <h1>
+          Apollo
+        </h1>
+        <a
+          class="adoptBtn"
+          href="/adoptionform/11111"
+        >
+          <span>
+            Adopt me
+          </span>
+           
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </a>
+      </div>
+      <dl
+        class="petTable"
+      >
+        <dt>
+          ID
+        </dt>
+        <dd>
+          11111
+        </dd>
+        <dt>
+          Age
+        </dt>
+        <dd>
+          1 year 3 months
+        </dd>
+        <dt>
+          Breed
+        </dt>
+        <dd>
+          Mixed Breed
+        </dd>
+        <dt>
+          Size
+        </dt>
+        <dd>
+          61.2 pounds
+        </dd>
+        <dt>
+          Gender
+        </dt>
+        <dd>
+          male
+        </dd>
+        <dt>
+          Neutering
+        </dt>
+        <dd>
+          Neutered
+        </dd>
+      </dl>
+      <div>
+        <p>
+          I can't wait to settle in to my new home. I've heard all about this family dog business and I think it sounds great - walks, playing with toys, treats, belly rubs... I'm excited about all of that! If you're as ready as I am, let's meet!
+        </p>
+      </div>
+      <div>
+        <h4>
+          Addtional Details
+        </h4>
+        <ul>
+          <li
+            class="detail"
+          >
+            I can be a little bit of an escape artist! I need a yard with a 6 ft wood fence.
+          </li>
+          <li
+            class="detail"
+          >
+            I need to meet any other dogs I might be living with.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

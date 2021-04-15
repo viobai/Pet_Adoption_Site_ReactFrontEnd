@@ -4,7 +4,7 @@ import style from './AboutUs.module.css';
 const AboutUs = () => {
     return (
         <div className={style.aboutUsPageContainer}>
-            <img className={style.imgAtBack} src="https://github.com/viobai/seainfo6150-final-project-webapp/blob/master/src/images/aboutUsImg.png?raw=true" alt="Pet Owner Washing His Dog"/>
+            <img className={style.imgAtBack} alt="Pet Owner Washing His Dog" src="https://github.com/viobai/seainfo6150-final-project-webapp/blob/master/src/images/aboutUsImg.png?raw=true" />
              <div className={style.column}>
                     <div className={style.card}>
                         <h2 className={style.subTitle}>Mission Statement</h2>

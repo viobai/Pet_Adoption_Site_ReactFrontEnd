@@ -105,13 +105,17 @@ header > a {
     text-align: center;
 }
 
-.colBtn:hover, .rowBtn:hover, .animalsDropBtn:hover, .dropBtnHam:hover, .animalsDropBtnInHam:hover, .logo:hover  {
+.colBtn:hover, .rowBtn:hover, .animalsDropBtn:hover, .dropBtnHam:hover, .animalsDropBtnInHam:hover  {
     background-color: var(--btnHovCol);
+}
+
+.logo:hover, a {
+    color: var(--btnHovCol);
 }
 
 /* Hamburger Button Dropdown Menu */
 
-.dropdown > * {
+.dropdown, .dropdown > * {
     display: flex;
     justify-content: flex-end;
 }

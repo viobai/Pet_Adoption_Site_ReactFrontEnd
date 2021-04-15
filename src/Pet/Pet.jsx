@@ -1,16 +1,17 @@
 import React from 'react';
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import style from "./Pet.module.css";
-import { FcLike  } from "react-icons/fc";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const Pet = (props) => {
+    
     const imgDesc = "a " + props.pet.category + " of breed " + props.pet.breed + " named " + props.pet.name;
     const adoptionLink = "/adoptionform/" + props.pet.id;
 
-    return (
-
+    if (!props.pet) {
+        return <div>There pet you are requesting does not exist.</div>;
+    } else {
+        return (
             <div className={style.petInfoContainer}>
                 <div className={style.imgContainer}><img className={style.petImg} src={props.pet.imageUrl} alt={imgDesc}/></div>
                 <div className={style.petInfo}>
@@ -43,14 +44,9 @@ const Pet = (props) => {
                     </div>
                     
                 </div>
-            </div>
-
-        
-    )
-}
-
-Pet.propTypes = {
-    pet: PropTypes.object.isRequired
+            </div> 
+        )
+    }
 }
 
 export default Pet

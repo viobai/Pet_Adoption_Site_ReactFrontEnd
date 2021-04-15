@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PetSublistLinks tests renders correctly 1`] = `
+<div>
+  <div
+    class="dropContainer"
+  >
+    <a
+      class="categoryLink"
+      href="/petlist"
+    >
+      All
+    </a>
+    <a
+      class="categoryLink"
+      href="/petlist/dog"
+    >
+      Dogs
+    </a>
+    <a
+      class="categoryLink"
+      href="/petlist/cat"
+    >
+      Cats
+    </a>
+    <a
+      class="categoryLink"
+      href="/petlist/smallfurry"
+    >
+      Small & Furry
+    </a>
+    <a
+      class="categoryLink"
+      href="/petlist/bird"
+    >
+      Birds
+    </a>
+    <a
+      class="categoryLink"
+      href="/petlist/reptile"
+    >
+      Reptiles
+    </a>
+  </div>
+</div>
+`;

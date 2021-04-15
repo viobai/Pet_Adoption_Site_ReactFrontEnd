@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import PropTypes from "prop-types";
 import style from "./Form.module.css";
 
 const Form = (props) => {
@@ -41,6 +40,7 @@ const Form = (props) => {
     setSubmittedForm(data);
   };
 
+
   return (
     <div className={style.formPageContainer}>
       {
@@ -77,16 +77,17 @@ const Form = (props) => {
             </div>
 
             <div className={style.inputContainer}>
-              <label className={style.question} className={style.question} htmlFor="petListId"><span className={style.required}>*</span> Interested Animal(s) :
+              <label className={style.question} htmlFor="petListId"><span className={style.required}>*</span> Interested Animal(s) :
                 <select className={style.petSelect} required multiple name="petList" id="petListId" onClick={onClickHandler} defaultValue={[petId]}>
                   <option value="any" key="allAnimalsId">All / No Particular</option>
-                  {props.pets.map((pet) => {
+                  {props.pets ? props.pets.map((pet) => {
                     if (petId && (pet.id === petId)) {
                       return <option  value={pet.id} key={pet.id+"id"}>{pet.name}</option>
                     } else {
                       return <option value={pet.id} key={pet.id+"id"}>{pet.name}</option>
                     } 
-                  })}
+                    }) : null
+                  }
                 </select>
               </label>
             </div>
@@ -110,8 +111,8 @@ const Form = (props) => {
             </div>
 
             <div className={style.inputContainer}>
-              <p className={style.question}><span className={style.required}>*</span> Please include any of the followings that is part of your current household.</p>
-              <label htmlFor="householdMemberYes"><input onClick={onClickHouseMember} required name="householdMemberGeneral" type="radio" id="householdMemberYes" value="childrenOrPets" />Children or Pets</label>
+              <p className={style.question}><span className={style.required}>*</span> Please include any of the followings that is a member of your current household.</p>
+              <label htmlFor="householdMemberYes"><input onClick={onClickHouseMember} required name="householdMemberGeneral" type="radio" id="householdMemberYes" value="childrenOrPets" /> Children or Pets</label>
               {showHouseMember && 
                 <div className={style.houseMemberList}>
                   <label htmlFor="householdMemberChildren6"><input name="householdMember" type="checkbox" id="householdMemberChildren6" value="children6" /> Children: Age Under 6</label>
@@ -123,24 +124,24 @@ const Form = (props) => {
                 </div>
                 
               }
-              <label htmlFor="householdMemberNone"><input onClick={onClickNoHouseMember} name="householdMemberGeneral" type="radio" id="householdMemberNone" value="none" />None of the above</label>
+              <label htmlFor="householdMemberNone"><input onClick={onClickNoHouseMember} name="householdMemberGeneral" type="radio" id="householdMemberNone" value="none" /> None of the above</label>
             </div>   
 
             <div className={style.inputContainer}>
               <p className={style.question}>Which would be the best way to reach you?</p>
               <label htmlFor="byPhoneId">
-                <input name="contactWay" type="radio" id="byPhoneId" value="phone" onChange={onPhoneSelect} /> phone 
+                <input name="contactWay" type="radio" id="byPhoneId" value="phone" onChange={onPhoneSelect} /> Phone 
                 {showContactTime && 
                     <label className={style.hiddenInput} htmlFor="contactTimeId">Best time to call you?<input type="text" name="contactTime" id="contactTimeId" placeholder="optional"/></label>
                 }
               </label>
-              <label htmlFor="byEmailId"><input name="contactWay" type="radio" id="byEmailId" value="email" onChange={onEmailSelect}/> email</label>
+              <label htmlFor="byEmailId"><input name="contactWay" type="radio" id="byEmailId" value="email" onChange={onEmailSelect}/> Email</label>
             </div>
             
             <div className={style.inputContainer}>
               <p className={style.question}><span className={style.required}>*</span> Do you have any experience with the type of animal which you applying for adoption?</p>
-              <label htmlFor="yesExperience"><input required name="petExperience" type="radio" id="yesExperience" value="yes" /> yes</label>
-              <label htmlFor="noExperience"><input name="petExperience" type="radio" id="noExperience" value="no" /> no</label>
+              <label htmlFor="yesExperience"><input required name="petExperience" type="radio" id="yesExperience" value="yes" /> Yes</label>
+              <label htmlFor="noExperience"><input name="petExperience" type="radio" id="noExperience" value="no" /> No</label>
             </div>
             
             <br/>
@@ -157,7 +158,4 @@ const Form = (props) => {
   )
 }
 
-Form.propTypes = {
-  pets: PropTypes.array.isRequired
-}
 export default Form

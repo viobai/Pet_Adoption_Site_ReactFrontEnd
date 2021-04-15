@@ -14,6 +14,18 @@
     margin: 1rem;
 }
 
+.emptyListMsg {
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    margin: 0;
+    background-color: #ebe5e2;
+    font-family: 'Marcellus', serif;
+    font-size: 28px;
+    font-weight: bolder;
+    color: rgb(214, 32, 8);
+}
+
 @supports (display: grid) {
     .petList{
         grid-template-columns: repeat(3, 1fr);

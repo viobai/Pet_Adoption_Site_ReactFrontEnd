@@ -127,7 +127,7 @@ body {
     pointer-events: none;
 }
 
-.homeBottom > h3 {
+.homeBottom > div > h3 {
     padding: 0;
     font-family: 'Marcellus', serif;
     font-size: 3vh;
@@ -142,6 +142,16 @@ body {
     position: relative;
     padding: 2rem 3rem 2rem 3rem;
     grid-gap: 3rem;
+}
+
+.emptyListMsg {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Marcellus', serif;
+    font-size: 28px;
+    font-weight: bolder;
+    color: rgb(214, 32, 8);
 }
 
 @supports (display: grid) {

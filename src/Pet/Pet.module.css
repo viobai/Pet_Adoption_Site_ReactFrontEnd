@@ -1,7 +1,7 @@
 .petInfoContainer {
     display: grid;
     column-gap: 30px;
-    padding: 2rem 3rem 2rem 3rem;
+    padding: 0rem 3rem 0rem 3rem;
     min-height: 80vh;
     background-color: #ebe5e2;
 }
@@ -14,6 +14,8 @@
     @media (max-width: 700px){
         .petInfoContainer {
             grid-template-columns: 1fr;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
     }
 }

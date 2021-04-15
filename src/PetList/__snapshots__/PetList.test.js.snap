@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PetList tests renders correctly with no pet 1`] = `
+<div>
+  <div
+    class="emptyListMsg"
+  >
+    There are currently no pets available for adoption. :)
+  </div>
+</div>
+`;
+
+exports[`PetList tests renders correctly with single pet 1`] = `
+<div>
+  <div
+    class="petListContainer"
+  >
+    <ul
+      class="petList"
+    >
+      <li>
+        <a
+          class="link"
+          href="/id/11111"
+        >
+          <div
+            class="card"
+          >
+            <p
+              class="hiddenMsg"
+            >
+              LEARN MORE
+            </p>
+            <div
+              class="imgContainer"
+            >
+              <img
+                alt="a dog of breed Mixed Breed named Apollo"
+                src="https://raw.githubusercontent.com/viobai/seainfo6150-final-project-webapp/master/src/images/Pet/Apollo.jpeg"
+              />
+            </div>
+            <div
+              class="shortInfo"
+            >
+              <span
+                class="name"
+              >
+                Apollo
+              </span>
+               
+              1 year 3 months
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PetListItem tests renders correctly 1`] = `
+<div>
+  <a
+    class="link"
+    href="/id/11111"
+  >
+    <div
+      class="card"
+    >
+      <p
+        class="hiddenMsg"
+      >
+        LEARN MORE
+      </p>
+      <div
+        class="imgContainer"
+      >
+        <img
+          alt="a dog of breed Mixed Breed named Apollo"
+          src="https://raw.githubusercontent.com/viobai/seainfo6150-final-project-webapp/master/src/images/Pet/Apollo.jpeg"
+        />
+      </div>
+      <div
+        class="shortInfo"
+      >
+        <span
+          class="name"
+        >
+          Apollo
+        </span>
+         
+        1 year 3 months
+      </div>
+    </div>
+  </a>
+</div>
+`;
