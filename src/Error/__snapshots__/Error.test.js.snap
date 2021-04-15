@@ -17,7 +17,7 @@ exports[`Error tests renders correctly 1`] = `
       Oops, the page you are looking for does not exist.
     </p>
     <p>
-      Feel free to shoot us a email at
+      Feel free to shoot us an email at
       <span>
          
         <a
@@ -35,7 +35,7 @@ exports[`Error tests renders correctly 1`] = `
       href="/petlist"
     >
       <span>
-        Got Back to View Pets
+        View All Pets
       </span>
        
       <span

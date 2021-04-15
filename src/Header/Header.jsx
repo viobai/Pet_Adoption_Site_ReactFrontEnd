@@ -28,7 +28,7 @@ const Header = () => {
                     {hamburgerShowInfo && 
                         <div className={style.navBarCol}>
                             <div className={style.dropdown}>
-                                <button onClick={onClickHamAni} className={style.animalsDropBtnInHam}>Animals</button>
+                                <button onClick={onClickHamAni} className={style.animalsDropBtnInHam}>Pets For Adoption</button>
                                 {hamburgerAnimalShowInfo && <div className={style.sublistHam}><PetSublistLinks/></div>}
                             </div>
                             <Link className={style.colBtn} to="/adoptionform" >Apply For Adoption</Link>
@@ -41,7 +41,7 @@ const Header = () => {
             <div className={style.navBarContainer}>
                 <div className={style.navBarRow}>
                     <div>
-                        <button onClick={onClickAni} className={style.animalsDropBtn}>Animals</button>
+                        <button onClick={onClickAni} className={style.animalsDropBtn}>Pets For Adoption</button>
                         {animalShowInfo && <PetSublistLinks/>}
                     </div>
                     <Link className={style.rowBtn} to="/adoptionform" >Apply For Adoption</Link>

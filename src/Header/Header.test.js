@@ -10,14 +10,14 @@ describe("Header tests", () => {
 
     it("renders correctly after Animals button is pressed once", () => {  
         const { container, getByText } = render(<Header />);
-        const button = getByText("Animals");
+        const button = getByText("Pets For Adoption");
         fireEvent.click(button);
         expect(container).toMatchSnapshot();
     });
 
     it("renders correctly after Animals button is pressed twice", () => {  
         const { container, getByText } = render(<Header />);
-        const button = getByText("Animals");
+        const button = getByText("Pets For Adoption");
         fireEvent.click(button);
         fireEvent.click(button);
         expect(container).toMatchSnapshot();

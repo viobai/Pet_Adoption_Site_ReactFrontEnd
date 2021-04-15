@@ -1,7 +1,7 @@
 .petInfoContainer {
     display: grid;
     column-gap: 30px;
-    padding: 0rem 3rem 0rem 3rem;
+    padding: 2rem 3rem 2rem 3rem;
     min-height: 80vh;
     background-color: #ebe5e2;
 }

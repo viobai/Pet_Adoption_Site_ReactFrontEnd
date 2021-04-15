@@ -51,7 +51,7 @@ exports[`Header tests renders correctly 1`] = `
           <button
             class="animalsDropBtn"
           >
-            Animals
+            Pets For Adoption
           </button>
         </div>
         <a
@@ -123,7 +123,7 @@ exports[`Header tests renders correctly after Animals button is pressed once 1`]
           <button
             class="animalsDropBtn"
           >
-            Animals
+            Pets For Adoption
           </button>
           <div
             class="dropContainer"
@@ -235,7 +235,7 @@ exports[`Header tests renders correctly after Animals button is pressed twice 1`
           <button
             class="animalsDropBtn"
           >
-            Animals
+            Pets For Adoption
           </button>
         </div>
         <a
