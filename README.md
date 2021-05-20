@@ -1,4 +1,4 @@
-# INFO6150 Web Design: A Pet Adoption Site (React Front End)
+# INFO6150 Web Design: A Pet Adoption Front End Project (React Only)
 
 Link to final project assignment: https://northeastern.instructure.com/courses/64293/assignments/834230
 
