@@ -9,11 +9,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Demo
 >## 1. Home Page
-![](https://github.com/viobai/Pet_Adoption_Site_ReactFrontEnd/blob/master/HomePg.gif)
+<img src="https://github.com/viobai/Pet_Adoption_Site_ReactFrontEnd/blob/master/HomePg.gif" width="700"/>
+
 >## 2. Pet List
-![](https://github.com/viobai/Pet_Adoption_Site_ReactFrontEnd/blob/master/ListPg%20.gif)
+<img src="https://github.com/viobai/Pet_Adoption_Site_ReactFrontEnd/blob/master/ListPg%20.gif" width="700"/>
+
 >## 3. Adoption Form
-![](https://github.com/viobai/Pet_Adoption_Site_ReactFrontEnd/blob/master/AdptForm.gif)
+<img src="https://github.com/viobai/Pet_Adoption_Site_ReactFrontEnd/blob/master/AdptForm.gif" width="700"/>
 
 ### Installation and Deployment
 
