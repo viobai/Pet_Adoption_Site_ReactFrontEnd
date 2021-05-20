@@ -1,4 +1,4 @@
-# SEA INFO-6150 Final Project
+# INFO6150 Web Design Final React Project: A Pet Adoption Site (Front End Only)
 
 Link to final project assignment: https://northeastern.instructure.com/courses/64293/assignments/834230
 
